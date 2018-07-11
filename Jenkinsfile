@@ -6,5 +6,10 @@ pipeline {
         echo 'hello world'
       }
     }
+    stage('build') {
+      steps {
+        sh 'mvn clean package -DskipTests'
+      }
+    }
   }
 }
